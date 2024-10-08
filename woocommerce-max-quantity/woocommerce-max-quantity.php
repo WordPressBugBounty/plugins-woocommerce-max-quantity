@@ -2,16 +2,16 @@
 /**
  * Plugin Name: Maximum Quantity for WooCommerce Shops
  * Plugin URI:
- * Description: Set a limit for the maximum quantity that can be added to the cart, globally or per product.
- * Version: 2.1
+ * Description: Set a limit for the maximum quantity that can be added to the WooCommerce cart, globally or per product.
+ * Version: 2.2.1
  * Author: PT Woo Plugins (by Webdados)
  * Author URI: https://ptwooplugins.com
  * Text Domain: woocommerce-max-quantity
  * Requires at least: 5.6
- * Tested up to: 6.6
+ * Tested up to: 6.7
  * Requires PHP: 7.0
  * WC requires at least: 5.0
- * WC tested up to: 9.1
+ * WC tested up to: 9.4
  * Requires Plugins: woocommerce
  * License: GPLv3
  */
@@ -44,7 +44,7 @@ function init() {
 		add_filter( 'woocommerce_store_api_product_quantity_limit', __NAMESPACE__ . '\blocks_cart_max_qty', 10, 2 );
 	}
 }
-add_action( 'plugins_loaded', __NAMESPACE__ . '\init' );
+add_action( 'init', __NAMESPACE__ . '\init' );
 
 
 /**
@@ -217,7 +217,7 @@ function wc_max_qty_get_cart_qty( $product_id, $cart_item_key = '' ) {
 		if ( intval( $product_id ) === intval( $values['product_id'] ) ) {
 			/*
 			 * In case of updating the cart quantity, don't count this cart item key
-			otherwise they won't be able to REDUCE the number of items in cart becuase it will think it is adding the new quantity on top of the existing quantity, when in fact it is reducing the existing quantity to the new quantity.
+			otherwise they won't be able to REDUCE the number of items in cart because it will think it is adding the new quantity on top of the existing quantity, when in fact it is reducing the existing quantity to the new quantity.
 			 */
 			if ( $cart_item_key === $other_cart_item_keys ) {
 				continue;

@@ -1,11 +1,11 @@
 ﻿=== Maximum Quantity for WooCommerce Shops ===
-Contributors: webdados, ptwooplugins
+Contributors: nakedcatplugins, webdados
 Donate link: https://www.paypal.me/Wonderm00n
 Tags: max quantity, cart maximum, max, cart max, order limit
-Requires at least: 5.6
-Tested up to: 6.7
-Requires PHP: 7.0
-Stable tag: 2.2.1
+Requires at least: 5.8
+Tested up to: 6.8
+Requires PHP: 7.2
+Stable tag: 2.3
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -23,7 +23,7 @@ This works for all products in your WooCommerce store: Simple and Variable produ
 
 Customers do not have to be logged in for this to work. This works for guest buyers, as well as logged-in buyers.
 
-This plugin was initially developed by [Isabel Castillo](https://profiles.wordpress.org/isabel104/) and later adopted by [Marco Almeida | Webdados](https://profiles.wordpress.org/webdados/) / [PT Woo Plugins](https://profiles.wordpress.org/ptwooplugins/).
+This plugin was initially developed by [Isabel Castillo](https://profiles.wordpress.org/isabel104/) and later adopted by [Marco Almeida | Webdados](https://profiles.wordpress.org/webdados/) / [Naked Cat Plugins](https://profiles.wordpress.org/nakedcatplugins/).
 
 Header photo by [Mick Haupt](https://unsplash.com/@rocinante_11).
 
@@ -47,11 +47,11 @@ The plugin only has 2 settings. You can use these settings in a variety of ways 
 
 Already know our other WooCommerce (premium) plugins?
 
-* [Simple Custom Fields for WooCommerce Blocks Checkout](https://ptwooplugins.com/product/simple-custom-fields-for-woocommerce-blocks-checkout/) - Add custom fields to the new WooCommerce Block-based Checkout
-* [Simple WooCommerce Order Approval](https://ptwooplugins.com/product/simple-woocommerce-order-approval/) - The hassle-free solution for WooCommerce order approval before payment
-* [Shop as Client for WooCommerce](https://ptwooplugins.com/product/shop-as-client-for-woocommerce-pro-add-on/) - Quickly create orders on behalf of your customers
-* [DPD / SEUR / Geopost Pickup and Lockers network for WooCommerce](https://ptwooplugins.com/product/dpd-seur-geopost-pickup-and-lockers-network-for-woocommerce/) - Deliver your WooCommerce orders on the DPD and SEUR Pickup network of Parcelshops and Lockers in 21 European countries
-* [Taxonomy/Term and Role based Discounts for WooCommerce](https://ptwooplugins.com/product/taxonomy-term-and-role-based-discounts-for-woocommerce-pro-add-on/) - Easily create bulk discount rules for products based on any taxonomy terms (built-in or custom).
+* [Simple Checkout Fields Manager for WooCommerce](https://nakedcatplugins.com/product/simple-custom-fields-for-woocommerce-blocks-checkout/) - Add custom fields and manage (remove, make required or optional) core fields on the new WooCommerce Block-based Checkout
+* [Simple WooCommerce Order Approval](https://nakedcatplugins.com/product/simple-woocommerce-order-approval/) - The hassle-free solution for WooCommerce order approval before payment
+* [Shop as Client for WooCommerce](https://nakedcatplugins.com/product/shop-as-client-for-woocommerce-pro-add-on/) - Quickly create orders on behalf of your customers
+* [DPD / SEUR / Geopost Pickup and Lockers network for WooCommerce](https://nakedcatplugins.com/product/dpd-seur-geopost-pickup-and-lockers-network-for-woocommerce/) - Deliver your WooCommerce orders on the DPD and SEUR Pickup network of Parcelshops and Lockers in 21 European countries
+* [Taxonomy/Term and Role based Discounts for WooCommerce](https://nakedcatplugins.com/product/taxonomy-term-and-role-based-discounts-for-woocommerce-pro-add-on/) - Easily create bulk discount rules for products based on any taxonomy terms (built-in or custom).
 
 == Frequently Asked Questions ==
 
@@ -94,6 +94,11 @@ Sure. Go to [GlotPress](https://translate.wordpress.org/projects/wp-plugins/wooc
 2. The individual product’s setting: It is labeled “Max quantity per order” and is found on the individual product edit screen, in the Product Data box, on the Inventory tab.
 
 == Changelog ==
+
+= 2.3 - 2025-04-14 =
+* [NEW] We are now called Naked Cat Plugins 😻
+* [DEV] Requires WordPress 5.8, WooCommerce 7.1, and PHP 7.2
+* [DEV] Tested with WordPress 6.8-RC3-60146 and WooCommerce 9.8.1
 
 = 2.2.1 - 2024-10-08 =
 * [FIX] Load text domain at the right time to avoid PHP notices on WordPress 6.7 and above

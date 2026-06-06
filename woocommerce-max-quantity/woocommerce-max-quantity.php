@@ -3,15 +3,15 @@
  * Plugin Name:          Maximum Quantity for WooCommerce Shops
  * Plugin URI:
  * Description:          Set a limit for the maximum quantity that can be added to the WooCommerce cart, globally or per product.
- * Version:              2.3
+ * Version:              2.4
  * Author:               Naked Cat Plugins (by Webdados)
  * Author URI:           https://nakedcatplugins.com
  * Text Domain:          woocommerce-max-quantity
- * Requires at least:    5.8
- * Tested up to:         6.8
+ * Requires at least:    5.9
+ * Tested up to:         7.0
  * Requires PHP:         7.2
- * WC requires at least: 7.1
- * WC tested up to:      9.8
+ * WC requires at least: 7.3
+ * WC tested up to:      10.8
  * Requires Plugins:     woocommerce
  * License:              GPLv3
  */
@@ -110,7 +110,10 @@ function wc_max_qty_add_product_field() {
  */
 function wc_max_qty_save_product_field( $post_id ) {
 	$product = wc_get_product( $post_id );
-	$val     = $product->get_meta( '_isa_wc_max_qty_product_max' );
+	if ( ! $product ) {
+		return;
+	}
+	$val = $product->get_meta( '_isa_wc_max_qty_product_max' );
 	// phpcs:ignore WordPress.Security.NonceVerification.Missing
 	$new = isset( $_POST['_isa_wc_max_qty_product_max'] ) ? sanitize_text_field( wp_unslash( $_POST['_isa_wc_max_qty_product_max'] ) ) : ''; // Nonce verification is already taken care by WooCommerce
 	if ( $val !== $new ) {
@@ -129,7 +132,10 @@ function wc_max_qty_save_product_field( $post_id ) {
  */
 function wc_get_product_max_limit( $product_id ) {
 	$product = wc_get_product( $product_id );
-	$qty     = $product->get_meta( '_isa_wc_max_qty_product_max' );
+	if ( ! $product ) {
+		return false;
+	}
+	$qty = $product->get_meta( '_isa_wc_max_qty_product_max' );
 	if ( empty( $qty ) ) {
 		// Honor the Sold individually setting
 		$limit = $product->is_sold_individually() ? 1 : false;
@@ -255,7 +261,10 @@ function wc_max_qty_add_to_cart_validation( $passed, $product_id, $quantity, $va
 		}
 		$already_in_cart = wc_max_qty_get_cart_qty( $product_id );
 		$product         = wc_get_product( $product_id );
-		$product_title   = $product->get_title();
+		if ( ! $product ) {
+			return $passed;
+		}
+		$product_title = $product->get_title();
 		if ( ! empty( $already_in_cart ) ) {
 			// There was already a quantity of this item in cart prior to this addition.
 			// Check if the total of already_in_cart + current addition quantity is more than our max.
@@ -340,6 +349,9 @@ function wc_max_qty_update_cart_validation( $passed, $cart_item_key, $values, $q
 		}
 		$already_in_cart = wc_max_qty_get_cart_qty( $values['product_id'], $cart_item_key );
 		$product         = wc_get_product( $values['product_id'] );
+		if ( ! $product ) {
+			return $passed;
+		}
 		if ( ( $already_in_cart + $quantity ) > $new_max ) {
 			wc_add_notice(
 				apply_filters(

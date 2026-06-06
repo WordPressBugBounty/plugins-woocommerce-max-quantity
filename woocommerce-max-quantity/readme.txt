@@ -5,7 +5,7 @@ Tags: max quantity, cart maximum, max, cart max, order limit
 Requires at least: 5.8
 Tested up to: 6.8
 Requires PHP: 7.2
-Stable tag: 2.3
+Stable tag: 2.4
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -77,7 +77,7 @@ This is a free plugin. It’s our way of giving back to the wonderful WordPress 
 
 There’s a support tab on the top of this page, where you can ask the community for help. We’ll try to keep an eye on the forums but we cannot promise to answer support tickets.
 
-If you reach us by email or any other direct contact means, we’ll assume you need, premium, and of course, paid-for support.
+If you reach us by email or any other direct contact method, we’ll assume you need premium, paid-for support.
 
 = Where do I report security vulnerabilities found in this plugin? =
  
@@ -95,14 +95,20 @@ Sure. Go to [GlotPress](https://translate.wordpress.org/projects/wp-plugins/wooc
 
 == Changelog ==
 
+= 2.4 - 2026-06-06 =
+* [FIX] Fatal error in edge cases (e.g. a cart item referencing a product/variation that no longer exists)
+* [DEV] Move plugin repository to [GitHub](https://github.com/Naked-Cat-Plugins/Maximum-Quantity-for-WooCommerce-Shops)
+* [DEV] Requires WordPress 5.9 and WooCommerce 7.3
+* [DEV] Tested up to WordPress 7.1-alpha-62456 and WooCommerce 10.8.1
+
 = 2.3 - 2025-04-14 =
 * [NEW] We are now called Naked Cat Plugins 😻
 * [DEV] Requires WordPress 5.8, WooCommerce 7.1, and PHP 7.2
-* [DEV] Tested with WordPress 6.8-RC3-60146 and WooCommerce 9.8.1
+* [DEV] Tested up to WordPress 6.8-RC3-60146 and WooCommerce 9.8.1
 
 = 2.2.1 - 2024-10-08 =
 * [FIX] Load text domain at the right time to avoid PHP notices on WordPress 6.7 and above
-* [DEV] Tested with WordPress 6.7-beta1-59184 and WooCommerce 9.4.0-beta.2
+* [DEV] Tested up to WordPress 6.7-beta1-59184 and WooCommerce 9.4.0-beta.2
 
 = 2.1 - 2024-06-30 =
 * [NEW] Rename plugin to a more understandable title
@@ -119,7 +125,7 @@ Sure. Go to [GlotPress](https://translate.wordpress.org/projects/wp-plugins/wooc
 * Test and declare [WooCommerce High-Performance Order Storage](https://woocommerce.com/document/high-performance-order-storage/) compatibility
 * Test and declare [WooCommerce block-based Cart and Checkout](https://woocommerce.com/checkout-blocks/) compatibility
 * Requires WooCommerce 5.0 and WordPress 5.6
-* Tested with WooCommerce 8.9.0 and WordPress 6.6-alpha-58011
+* Tested up to WooCommerce 8.9.0 and WordPress 6.6-alpha-58011
 
 = 1.6 = 
 * Fixed - Can no longer use WC’s name in plugin.

@@ -1,25 +1,25 @@
-﻿=== Maximum Quantity for WooCommerce Shops ===
+﻿=== Maximum, Minimum and Multiple Quantity for WooCommerce Shops ===
 Contributors: nakedcatplugins, webdados
 Donate link: https://www.paypal.me/Wonderm00n
-Tags: max quantity, cart maximum, max, cart max, order limit
-Requires at least: 5.8
-Tested up to: 6.8
+Tags: max quantity, min quantity, cart maximum, cart minimum, order limit
+Requires at least: 5.9
+Tested up to: 7.0
 Requires PHP: 7.2
-Stable tag: 2.4
+Stable tag: 3.0
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
-Set a limit for the maximum quantity that can be added to the WooCommerce cart, globally or per product.
+Set a maximum and/or minimum quantity limit, and/or force a "sell in multiples of" quantity, for the WooCommerce cart, globally or per product.
 
 == Description ==
 
-Maximum Quantity for WooCommerce Shops is a simple extension for WooCommerce that only does one thing: it lets you set a maximum limit for the number of items that can be added to the cart, for each product, per order.
+Maximum, Minimum and Multiple Quantity for WooCommerce Shops is a simple extension for WooCommerce that lets you set a maximum and/or minimum limit for the number of items that can be added to the cart, and/or force customers to buy a product in multiples of a set number (e.g. 3, 6, 9, ...), for each product, per order.
 
-It’s like one of those signs at the grocery store that says, “LIMIT 2 PER CUSTOMER!”. This plugin will not add a sign like that, but the quantity input field will hit a limit.
+It’s like one of those signs at the grocery store that says, “LIMIT 2 PER CUSTOMER!”, “MINIMUM 5 ITEMS” or “SOLD IN PACKS OF 3”. This plugin will not add a sign like that, but the quantity input field will honor the maximum, the minimum and/or the multiple.
 
-You can set a global limit to affect all products in your WooCommerce store or, if you prefer, a different limit for each product, individually. Each product’s own limit will always override the global limit.
+You can set a global maximum, minimum and/or multiple to affect all products in your WooCommerce store or, if you prefer, a different one for each product, individually. Each product’s own setting will always override the global one.
 
-This works for all products in your WooCommerce store: Simple and Variable products. 
+This works for all products in your WooCommerce store: Simple and Variable products.
 
 Customers do not have to be logged in for this to work. This works for guest buyers, as well as logged-in buyers.
 
@@ -32,16 +32,16 @@ Header photo by [Mick Haupt](https://unsplash.com/@rocinante_11).
 **Install and Activate**
 
 1. In your WordPress dashboard, go to Plugins, Add New.
-2. Search for “Maximum Quantity for WooCommerce Shops” to find the plugin.
-3. When you see “Maximum Quantity for WooCommerce Shops”, click “Install Now” to install the plugin.
+2. Search for “Maximum, Minimum and Multiple Quantity for WooCommerce Shops” to find the plugin.
+3. When you see “Maximum, Minimum and Multiple Quantity for WooCommerce Shops”, click “Install Now” to install the plugin.
 4. Click “Activate” to activate the plugin.
 
 **Configuration**
 
-The plugin only has 2 settings. You can use these settings in a variety of ways to accomplish the unique goals of your store. See the documentation for specific ways to use these settings:
+The plugin has 3 global settings and the same 3 settings again per product, so you can override the global ones for a specific product. You can use these settings in a variety of ways to accomplish the unique goals of your store:
 
-1. To set a global limit to affect all products, go to WooCommerce, Settings, Products tab. Click “Inventory”. Scroll down to “Maximum quantity per product”. Set your desired limit there.
-2. To set an individual product limit for a single product, go the product’s own “Edit product” page. Scroll down to the “Product Data” box. Click on the Inventory tab. There, you’ll see the setting called “Max quantity per order” where you can set your desired maximum limit for that product.
+1. To set a global maximum, minimum and/or multiple to affect all products, go to WooCommerce, Settings, Products tab. Click “Inventory”. Scroll down to “Maximum quantity per product”, “Minimum quantity per product” and “Sell in multiples of”. Set your desired values there.
+2. To override this for a single product, go the product’s own “Edit product” page. Scroll down to the “Product Data” box. Click on the Inventory tab. There, you’ll see the same three settings, “Max quantity per order”, “Min quantity per order” and “Sell in multiples of”, where you can set your desired values for that product.
 
 == Other (premium) plugins ==
 
@@ -50,8 +50,9 @@ Already know our other WooCommerce (premium) plugins?
 * [Simple Checkout Fields Manager for WooCommerce](https://nakedcatplugins.com/product/simple-custom-fields-for-woocommerce-blocks-checkout/) - Add custom fields and manage (remove, make required or optional) core fields on the new WooCommerce Block-based Checkout
 * [Simple WooCommerce Order Approval](https://nakedcatplugins.com/product/simple-woocommerce-order-approval/) - The hassle-free solution for WooCommerce order approval before payment
 * [Shop as Client for WooCommerce](https://nakedcatplugins.com/product/shop-as-client-for-woocommerce-pro-add-on/) - Quickly create orders on behalf of your customers
-* [DPD / SEUR / Geopost Pickup and Lockers network for WooCommerce](https://nakedcatplugins.com/product/dpd-seur-geopost-pickup-and-lockers-network-for-woocommerce/) - Deliver your WooCommerce orders on the DPD and SEUR Pickup network of Parcelshops and Lockers in 21 European countries
+* [Advanced Coupon Restrictions for WooCommerce](https://nakedcatplugins.com/product/advanced-coupon-restrictions-for-woocommerce/) - Create coupons for any Product Taxonomy, User details, and Order destination.
 * [Taxonomy/Term and Role based Discounts for WooCommerce](https://nakedcatplugins.com/product/taxonomy-term-and-role-based-discounts-for-woocommerce-pro-add-on/) - Easily create bulk discount rules for products based on any taxonomy terms (built-in or custom).
+* [DPD / SEUR / Geopost Pickup and Lockers network for WooCommerce](https://nakedcatplugins.com/product/dpd-seur-geopost-pickup-and-lockers-network-for-woocommerce/) - Deliver your WooCommerce orders on the DPD and SEUR Pickup network of Parcelshops and Lockers in 21 European countries
 
 == Frequently Asked Questions ==
 
@@ -62,6 +63,14 @@ Yes, since version 1.4.
 = Can I set a different limit for different products? =
 
 Yes, since version 1.4.
+
+= Can I set a minimum quantity that customers must order? =
+
+Yes, since version 3.0, globally or per product.
+
+= Can I force customers to buy a product in multiples of a set number (e.g. 3, 6, 9, ...)? =
+
+Yes, since version 3.0, globally or per product.
 
 = Is this plugin compatible with the new WooCommerce High-Performance Order Storage? =
 
@@ -94,6 +103,13 @@ Sure. Go to [GlotPress](https://translate.wordpress.org/projects/wp-plugins/wooc
 2. The individual product’s setting: It is labeled “Max quantity per order” and is found on the individual product edit screen, in the Product Data box, on the Inventory tab.
 
 == Changelog ==
+
+= 3.0 =
+* [NEW] "Minimum quantity per product" option, globally and per product, to require a minimum quantity per order (mirrors the existing maximum quantity option)
+* [NEW] "Sell in multiples of" option, globally and per product, to force quantities to be bought in multiples of a set number (e.g. 3 allows 3, 6, 9, ...)
+* [NEW] Renamed to "Maximum, Minimum and Multiple Quantity for WooCommerce Shops" to reflect the new options
+* [FIX] "Add to cart" buttons on product archives/lists (classic and block-based) now add a valid multiple and/or the minimum instead of always trying to add 1, when a "Sell in multiples of" and/or a minimum quantity is set
+* [TWEAK] Added a "Settings" link to the plugin's entry on the Plugins list page
 
 = 2.4 - 2026-06-06 =
 * [FIX] Fatal error in edge cases (e.g. a cart item referencing a product/variation that no longer exists)
